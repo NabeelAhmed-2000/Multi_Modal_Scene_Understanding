@@ -1,0 +1,8 @@
+torch
+torchvision
+transformers
+pillow
+requests
+matplotlib
+numpy
+accelerate
