@@ -16,7 +16,7 @@ This project implements a novel **Multi-Modal Scene Understanding Pipeline** tha
 Unlike standard image captioning which often misses details, our pipeline resolves visual conflicts by "reasoning" over individual object detections.
 
 ### System Architecture
-![System Pipeline Architecture](assets/pipeline.png)
+![System Pipeline Architecture](assets/pipeline_architecture.png)
 *Figure 1: The end-to-end workflow from raw image to final reasoning-based description.*
 
 ---
