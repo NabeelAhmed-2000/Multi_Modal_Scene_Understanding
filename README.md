@@ -1,10 +1,7 @@
 # Multi-Modal Scene Understanding Pipeline 🖼️🧠
 
-> **Course:** CS 584: Natural Language Processing (Fall 2024)
-> **Status:** Complete & Executable
-
 ## 👥 Team Members
-* **[Your Name]** - [Your Email Address]
+* **[Nabeel Ahmed]** - [nahmed48@gmu.edu]
 * **[Teammate Name]** - [Teammate Email Address]
 * **[Teammate Name]** - [Teammate Email Address]
 
@@ -35,16 +32,17 @@ This project is submitted as a **single, self-contained Jupyter Notebook** to en
     ```
 
 3.  **Run the Pipeline:**
-    Execute the notebook cells in order.
-    * **Cells 1-2:** Download the COCO validation dataset (approx 60 images).
-    * **Phase 1-3:** Perform detection and local captioning.
-    * **Phase 4:** Run the Qwen-2.5 Reasoning Agent.
-    * **Evaluation:** The final cells generate the performance metrics and plots.
+    The pipeline moves through distinct phases:
+    * **Phase 1 (Detection):** Utilizing `DETR-ResNet-50` to identify objects.
+    * **Phase 2 (Patching):** Dynamic cropping and upscaling of object regions.
+    * **Phase 3 (Local Captioning):** Using `BLIP-2` for detailed object-level visual descriptions.
+    * **Phase 4 (Reasoning):** Aggregating insights using **Qwen-2.5** and **Llama-3** to synthesize global descriptions.
+    * **Phase 5 (Tournament):** Using Llama-3 as an impartial judge to compare pipeline outputs against the baseline.
 
 ---
 
 ## 📊 Evaluation & Results
-We evaluated our pipeline against a standard End-to-End baseline using three key metrics:
+We evaluated our pipeline against a standard End-to-End baseline using three key metrics. We tested two different Reasoning Agents: **Qwen-2.5** and **Llama-3**.
 
 * **CLIP Score:** Measures how accurately the text describes the image content.
 * **BERTScore:** Measures the semantic similarity to human ground truth.
@@ -53,17 +51,25 @@ We evaluated our pipeline against a standard End-to-End baseline using three key
 ### Summary of Results
 | Model | CLIP Score (Accuracy) | BERTScore (Human-likeness) | Noun Count (Detail) |
 | :--- | :--- | :--- | :--- |
-| **Baseline (End-to-End)** | [Insert Value from Notebook] | [Insert Value] | [Insert Value] |
-| **Ours (Qwen-2.5)** | **[Insert Value]** | **[Insert Value]** | **[Insert Value]** |
+| **Baseline (End-to-End)** | [Insert Value] | [Insert Value] | [Insert Value] |
+| **Ours (Qwen-2.5)** | [Insert Value] | [Insert Value] | [Insert Value] |
+| **Ours (Llama-3)** | **[Insert Value]** | **[Insert Value]** | **[Insert Value]** |
 
-> *Note: Our pipeline achieves significantly higher detail (Noun Count) while maintaining competitive semantic accuracy.*
+### 🏆 LLM-as-a-Judge Tournament
+We also implemented an **LLM-based Tournament** (Phase 17) where Llama-3 acted as a judge to blindly compare descriptions from the Baseline vs. Our Pipeline.
+* **Win Rate vs Baseline:** [Insert % or Win Count]
+
+> *Note: Both Qwen and Llama-3 based pipelines significantly outperformed the baseline in detail richness.*
 
 ---
 
 ## 🛠️ Tech Stack
 * **Object Detection:** DETR (ResNet-50)
 * **Captioning:** BLIP-2 (Opt-2.7b)
-* **Reasoning Agent:** Qwen-2.5-7B-Instruct (4-bit Quantized)
+* **Reasoning Agents:**
+  * Qwen-2.5-7B-Instruct (4-bit Quantized)
+  * Llama-3-8B-Instruct (4-bit Quantized)
+* **Evaluation:** OpenAI CLIP, BERTScore, and LLM-as-a-Judge (Llama-3)
 * **Infrastructure:** PyTorch, HuggingFace Transformers, Google Colab (A100)
 
 ## 📂 Files
