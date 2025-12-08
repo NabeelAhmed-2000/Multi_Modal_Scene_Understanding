@@ -2,11 +2,13 @@ torch
 transformers
 accelerate
 bitsandbytes
-scipy
+peft
+unsloth
 pillow
 matplotlib
+scipy
 nltk
-bert-score
-pandas
+bert_score
 requests
-unsloth
+pandas
+numpy
