@@ -1,8 +1,11 @@
+# Core NLP/VLM libraries
 torch
 torchvision
 transformers
-pillow
-requests
-matplotlib
-numpy
 accelerate
+sentence-transformers
+Pillow
+requests
+tqdm
+numpy
+matplotlib
