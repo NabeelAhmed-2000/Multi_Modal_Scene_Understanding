@@ -8,7 +8,7 @@
 ---
 
 ## 📖 Overview
-This project implements a novel **Multi-Modal Scene Understanding Pipeline** that integrates Object Detection (DETR), Vision-Language Captioning (BLIP-2), and Large Language Model Reasoning (Qwen 2.5).
+This project implements a novel **Multi-Modal Scene Understanding Pipeline** that integrates Object Detection (DETR), Vision-Language Captioning (BLIP-2), and Large Language Model Reasoning (Qwen-2.5 & Llama-3).
 
 Unlike standard image captioning which often misses details, our pipeline resolves visual conflicts by "reasoning" over individual object detections.
 
@@ -51,15 +51,16 @@ We evaluated our pipeline against a standard End-to-End baseline using three key
 ### Summary of Results
 | Model | CLIP Score (Accuracy) | BERTScore (Human-likeness) | Noun Count (Detail) |
 | :--- | :--- | :--- | :--- |
-| **Baseline (End-to-End)** | [Insert Value] | [Insert Value] | [Insert Value] |
-| **Ours (Qwen-2.5)** | [Insert Value] | [Insert Value] | [Insert Value] |
-| **Ours (Llama-3)** | **[Insert Value]** | **[Insert Value]** | **[Insert Value]** |
+| **Baseline (End-to-End)** | 28.12 | 0.87 | 12.07 |
+| **Ours (Qwen-2.5)** | 27.40 | 0.87 | 25.92 |
+| **Ours (Llama-3)** | 22.85 | 0.83 | 54.87 |
 
 ### 🏆 LLM-as-a-Judge Tournament
 We also implemented an **LLM-based Tournament** (Phase 17) where Llama-3 acted as a judge to blindly compare descriptions from the Baseline vs. Our Pipeline.
-* **Win Rate vs Baseline:** [Insert % or Win Count]
+* **Llama-3 vs Baseline:** 59-1
+* **Qwen-2.5 vs Baseline:** 62-1
 
-> *Note: Both Qwen and Llama-3 based pipelines significantly outperformed the baseline in detail richness.*
+> *Note: Both Qwen-2.5 and Llama-3 based pipelines significantly outperformed the baseline in detail richness.*
 
 ---
 
