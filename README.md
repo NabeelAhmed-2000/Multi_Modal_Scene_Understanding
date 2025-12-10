@@ -2,8 +2,8 @@
 
 ## 👥 Team Members
 * **[Nabeel Ahmed]** - [nahmed48@gmu.edu]
-* **[Teammate Name]** - [Teammate Email Address]
-* **[Teammate Name]** - [Teammate Email Address]
+* **[Samruddhi Pradeep Deshmukh]** - [sdeshmu@gmu.edu]
+* **[Sina Mansouri]** - [smansou3@gmu.edu]
 
 ---
 
