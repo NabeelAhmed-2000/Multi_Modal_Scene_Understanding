@@ -1,13 +1,13 @@
-# Multi-Modal Scene Understanding Pipeline 🖼️🧠
+# Multi-Modal Scene Understanding Pipeline
 
-## 👥 Team Members
+## Team Members
 * **[Nabeel Ahmed]** - [nahmed48@gmu.edu]
 * **[Samruddhi Pradeep Deshmukh]** - [sdeshmu@gmu.edu]
 * **[Sina Mansouri]** - [smansou3@gmu.edu]
 
 ---
 
-## 📖 Overview
+## Overview
 This project implements a novel **Multi-Modal Scene Understanding Pipeline** that integrates Object Detection (DETR), Vision-Language Captioning (BLIP-2), and Large Language Model Reasoning (Qwen-2.5 & Llama-3).
 
 Unlike standard image captioning which often misses details, our pipeline resolves visual conflicts by "reasoning" over individual object detections.
@@ -18,7 +18,7 @@ Unlike standard image captioning which often misses details, our pipeline resolv
 
 ---
 
-## 🚀 How to Reproduce (Executability)
+## How to Reproduce (Executability)
 This project is submitted as a **single, self-contained Jupyter Notebook** to ensure perfect reproducibility of the results and visualizations.
 
 1.  **Open the Notebook:**
@@ -41,7 +41,7 @@ This project is submitted as a **single, self-contained Jupyter Notebook** to en
 
 ---
 
-## 📊 Evaluation & Results
+##  Evaluation & Results
 We evaluated our pipeline against a standard End-to-End baseline using three key metrics. We tested two different Reasoning Agents: **Qwen-2.5** and **Llama-3**.
 
 * **CLIP Score:** Measures how accurately the text describes the image content.
@@ -55,7 +55,7 @@ We evaluated our pipeline against a standard End-to-End baseline using three key
 | **Ours (Qwen-2.5)** | 27.40 | 0.87 | 25.92 |
 | **Ours (Llama-3)** | 22.85 | 0.83 | 54.87 |
 
-### 🏆 LLM-as-a-Judge Tournament
+### LLM-as-a-Judge Tournament
 We also implemented an **LLM-based Tournament** (Phase 17) where Llama-3 acted as a judge to blindly compare descriptions from the Baseline vs. Our Pipeline.
 * **Llama-3 vs Baseline:** 59-1
 * **Qwen-2.5 vs Baseline:** 62-1
@@ -64,7 +64,7 @@ We also implemented an **LLM-based Tournament** (Phase 17) where Llama-3 acted a
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Object Detection:** DETR (ResNet-50)
 * **Captioning:** BLIP-2 (Opt-2.7b)
 * **Reasoning Agents:**
@@ -73,7 +73,7 @@ We also implemented an **LLM-based Tournament** (Phase 17) where Llama-3 acted a
 * **Evaluation:** OpenAI CLIP, BERTScore, and LLM-as-a-Judge (Llama-3)
 * **Infrastructure:** PyTorch, HuggingFace Transformers, Google Colab (A100)
 
-## 📂 Files
+## Files
 * `Multi_Modal_Scene_Understanding.ipynb`: The core research implementation.
 * `requirements.txt`: Python dependency list.
 * `assets/`: Supplementary visualizations.
